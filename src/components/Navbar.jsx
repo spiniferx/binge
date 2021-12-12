@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { getAllTrending } from './API'
+import { useEffect,useState } from 'react'
 
 const Container = styled.div`
    height: 10%;
@@ -42,7 +44,13 @@ const NavButtons = styled.text`
 
 const Navbar = () => {
 
+    useEffect(() => {
+        const response = getAllTrending();
+        console.log(response.data,"APi called");
+    }, [])
+
     const handleOnClick = (e) => {
+       
         if(e.target.id === 'home')
         {
             window.location.assign('/')
@@ -59,7 +67,6 @@ const Navbar = () => {
         {
             window.location.assign('/top-rated')
         }
-
     }
 
     return (
