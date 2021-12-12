@@ -1,19 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-//#EDEAE5
-
 const Container = styled.div`
-   height: 80%; 
+   height: 80%;
    background-color: #EDEAE5;
 `
 
-const About = () => {
+
+const Series = () => {
     return (
         <Container>
-            About
+            Series
         </Container>
     )
 }
 
-export default About
+export default Series
