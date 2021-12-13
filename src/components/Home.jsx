@@ -8,15 +8,22 @@ const Container = styled.div`
 `
 const Wrapper = styled.div`
     height: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1 rem;
     align-items: center;
+    justify-content: center;
 `
 
 const Home = () => {
     return (
         <Container>
             <Wrapper>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
                 <Card></Card>
                 <Card></Card>
                 <Card></Card>
