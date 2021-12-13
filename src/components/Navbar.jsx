@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { getAllTrending } from './API'
-import { useEffect,useState } from 'react'
+import { useEffect } from 'react'
 
 const Container = styled.div`
    height: 10%;
@@ -46,7 +46,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const response = getAllTrending();
-        console.log(response.data,"APi called");
+        console.log(response,"APi called");
     }, [])
 
     const handleOnClick = (e) => {
